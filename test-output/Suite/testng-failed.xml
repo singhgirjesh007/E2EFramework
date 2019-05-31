@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <listeners>
+    <listener class-name="Academy.Listnere"/>
+  </listeners>
+  <test name="Homepage Validation">
+    <classes>
+      <class name="Academy.HomePage"/>
+    </classes>
+  </test> <!-- Homepage Validation -->
+  <test name="Academy Validation">
+    <classes>
+      <class name="Academy.ValidateTitle"/>
+    </classes>
+  </test> <!-- Academy Validation -->
+  <test name="Navigation Bar Validation">
+    <classes>
+      <class name="Academy.ValidateNavigationBar"/>
+    </classes>
+  </test> <!-- Navigation Bar Validation -->
+  <test name="Application Validation">
+    <classes>
+      <class name="Academy.AppTest"/>
+    </classes>
+  </test> <!-- Application Validation -->
+  <test name="Academy Validation(failed)">
+    <classes>
+      <class name="Academy.ValidateNavigationBar">
+        <methods>
+          <include name="intializeBrowser"/>
+          <include name="terminateBrowser"/>
+        </methods>
+      </class> <!-- Academy.ValidateNavigationBar -->
+      <class name="Academy.ValidateTitle">
+        <methods>
+          <include name="intializeBrowser"/>
+          <include name="terminateBrowser"/>
+          <include name="basePageNavigaton"/>
+        </methods>
+      </class> <!-- Academy.ValidateTitle -->
+      <class name="Academy.HomePage">
+        <methods>
+          <include name="terminateBrowser"/>
+          <include name="intializeBrowser"/>
+        </methods>
+      </class> <!-- Academy.HomePage -->
+    </classes>
+  </test> <!-- Academy Validation(failed) -->
+</suite> <!-- Failed suite [Suite] -->

@@ -1,0 +1,4 @@
+pageFactory\LoginPage.class
+Academy\App.class
+pageFactory\LandingPage.class
+resources\TestBase.class
