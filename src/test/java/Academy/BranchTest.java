@@ -7,6 +7,7 @@ public class BranchTest {
 	@Test
 	public void branchTest() {
 		System.out.println("test");
+		System.out.println("bingo");
 	}
 
 }
