@@ -9,6 +9,9 @@ public class LandingPage {
 	
 	public WebDriver driver;
 	
+	
+	
+	
 	//need to create consturctor to give scope to Driver
 	public LandingPage (WebDriver driver) {
 		this.driver=driver;

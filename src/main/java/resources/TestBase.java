@@ -23,7 +23,7 @@ public class TestBase {
 	public WebDriver initializeDriver() throws IOException {
 
 		FileInputStream fis = new FileInputStream(
-				"E:\\Automation\\Maven Project Example\\E2EProject\\src\\main\\java\\config\\Config.properties");
+				System.getProperty("user.dir")+"\\src\\main\\java\\config\\Config.properties");
 		// Properties prop = new Properties();
 		//Define at global level
 		
@@ -57,4 +57,6 @@ public class TestBase {
 		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(src, new File("E:\\Automation\\Screen SHot\\"+result +"ss.png"));
 	}
+	
+	
 }

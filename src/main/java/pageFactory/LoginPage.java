@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class LoginPage {
 	
@@ -13,6 +14,7 @@ public class LoginPage {
 	public LoginPage (WebDriver driver) {
 		this.driver=driver;
 	}
+	
 	
 	By email =By.cssSelector("#user_email");
 	By password =By.cssSelector("#user_password");

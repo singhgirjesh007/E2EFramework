@@ -33,7 +33,7 @@ org.openqa.selenium.NoSuchElementException: no such element: Unable to locate el
 	 public void basePageNavigaton(String username,String password,String text) throws IOException {
 		
 		
-		driver.get(prop.getProperty("url"));
+		//driver.get(prop.getProperty("url"));
 		LandingPage l = new LandingPage(driver);
 		l.getLogin().click();
 		
