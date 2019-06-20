@@ -8,6 +8,7 @@ public class BranchTest {
 	public void branchTest() {
 		System.out.println("test");
 		System.out.println("bingo");
+		System.out.println("test");
 	}
 
 }
