@@ -6,4 +6,15 @@
       <class name="Academy.HomePage"/>
     </classes>
   </test> <!-- Default test -->
+  <test name="Default test(failed)">
+    <classes>
+      <class name="Academy.HomePage">
+        <methods>
+          <include name="terminateBrowser"/>
+          <include name="intializeBrowser"/>
+          <include name="basePageNavigaton" invocation-numbers="0 1"/>
+        </methods>
+      </class> <!-- Academy.HomePage -->
+    </classes>
+  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
