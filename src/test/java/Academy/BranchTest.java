@@ -1,8 +1,15 @@
 package Academy;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
-public class BranchTest {
+import resources.TestBase;
+
+public class BranchTest extends TestBase {
+	WebDriver driver;
+	public BranchTest(WebDriver driver) {
+		this.driver=driver;
+	}
 	
 	@Test
 	public void branchTest() {
