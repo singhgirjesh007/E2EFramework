@@ -1,3 +1,4 @@
+
 package Academy;
 
 /**
@@ -12,6 +13,9 @@ public class App
         
         System.out.println("test test");
         
-        System.out.println("test");
+       
     }
 }
+
+
+
