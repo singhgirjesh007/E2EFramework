@@ -16,6 +16,7 @@ public class BranchTest extends TestBase {
 		System.out.println("test");
 		System.out.println("bingo");
 		System.out.println("test");
+		System.out.println("test branch switch application");
 	}
 
 }
