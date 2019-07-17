@@ -3,6 +3,7 @@ package Academy;
 import java.io.IOException;
 
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -13,11 +14,11 @@ import resources.TestBase;
 
 public class HomePage extends TestBase{
 	
-	@BeforeTest
+	@BeforeMethod
 	public void intializeBrowser() throws IOException {
 		driver =initializeDriver();
 		//driver.get("http://qaclickacademy.com");
-		//driver.get(prop.getProperty("url"));
+		driver.get(prop.getProperty("url"));
 		// For this Test URL needs to dfine in Test because for 2nd data provided by data provider 
 		//no new url
 		/*INFO: Detected dialect: OSS
@@ -30,7 +31,7 @@ org.openqa.selenium.NoSuchElementException: no such element: Unable to locate el
 	
 	
 	@Test(dataProvider = "getData")
-	 public void basePageNavigaton(String username,String password,String text) throws IOException {
+	 public void basePageNavigaton(String username,String password) throws IOException {
 		
 		
 		//driver.get(prop.getProperty("url"));
@@ -53,14 +54,14 @@ org.openqa.selenium.NoSuchElementException: no such element: Unable to locate el
 	
 	@DataProvider
 	public Object[][] getData() {
-		Object[][] data = new Object[2][3];
+		Object[][] data = new Object[2][2];
 		data[0][0]= "nonrestricteduser@qw.com";
 		data[0][1]="123456";
-		data[0][2]="Non Restricted user";
+		
 		
 		data[1][0]="restricteduser@qw.com";
 		data[1][1]="45678";
-		data[1][2]="Restricted user";
+		
 		
 		return data;
 				
