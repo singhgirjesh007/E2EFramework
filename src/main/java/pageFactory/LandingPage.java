@@ -15,6 +15,7 @@ public class LandingPage {
 	//need to create consturctor to give scope to Driver
 	public LandingPage (WebDriver driver) {
 		this.driver=driver;
+		
 	}
 	
 	By login =By.xpath("//nav[@class='pull-right']/ul/li[4]");

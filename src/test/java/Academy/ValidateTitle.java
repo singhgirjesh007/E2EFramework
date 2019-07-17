@@ -6,6 +6,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -18,9 +19,9 @@ public class ValidateTitle extends TestBase{
 	
 	private static Logger log=LogManager.getLogger(ValidateTitle.class.getName());
 	
-	@BeforeTest
+	@BeforeMethod
 	public void intializeBrowser() throws IOException {
-		driver =initializeDriver();
+		initializeDriver();
 		log.info("Driver intialize");
 		//driver.get("http://qaclickacademy.com");
 		driver.get(prop.getProperty("url"));
@@ -32,11 +33,12 @@ public class ValidateTitle extends TestBase{
 	 public void basePageNavigaton() throws IOException {
 		
 		
-		driver =initializeDriver();
-		driver.get(prop.getProperty("url"));
+		
+		
 		LandingPage l = new LandingPage(driver);
-		String title = l.getTitle().getText();
-		Assert.assertEquals(title, "FEATURED COURSES123");
+		String title= driver.getTitle();
+		String expectedTitle="QA Click Academy | Selenium,Jmeter,SoapUI,Appium,Database testing,QA Training Academy";
+		Assert.assertEquals(title, expectedTitle);
 		log.info("Validation successfull");
 	}
 	
