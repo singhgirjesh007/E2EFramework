@@ -31,9 +31,7 @@ public class ValidateTitle extends TestBase{
 	
 	@Test
 	 public void basePageNavigaton() throws IOException {
-		
-		
-		
+	
 		
 		LandingPage l = new LandingPage(driver);
 		String title= driver.getTitle();
